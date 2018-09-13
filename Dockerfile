@@ -17,7 +17,7 @@ RUN apt-get -y update && \
     apt-get -y install libuuid1 && \
     apt-get -y update && \
     apt-get -y install apt-transport-https && \
-    apt-get -y install dotnet-hosting-2.0.8 && \
+    apt-get -y install dotnet-hosting-2.0.8
 
 
 COPY miProyecto .

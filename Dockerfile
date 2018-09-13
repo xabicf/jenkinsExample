@@ -1,9 +1,10 @@
 FROM ubuntu:latest
 
 RUN uname -a
-RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb && \
+RUN apt-get -y update && \
+    apt-get -y install wget dpkg && \
+    wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb && \
     dpkg -i packages-microsoft-prod.deb && \
-    apt-get -y update && \
     apt-get -y install nano && \
     apt-get -y install tree && \
     apt-get -y installliblttng-ust0 && \
@@ -14,6 +15,7 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsof
     apt-get -y libicu60  && \
     apt-get -y install libunwind8 && \
     apt-get -y install libuuid1 && \
+    apt-get -y update && \
     apt-get -y install dotnet && \
     apt-get -y install apt-transport-https && \
     apt-get -y install dotnet-hosting-2.0.8 && \

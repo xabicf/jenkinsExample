@@ -6,7 +6,7 @@ USER root
 
 FROM microsoft/dotnet:2.1-sdk AS dotnet-build
 WORKDIR /app
-COPY . .
+COPY ./piranha.core/ .
 RUN dotnet restore -nowarn:msb3202,nu1503
 RUN ls -la 
 RUN dotnet publish -c Release -o /app
@@ -26,5 +26,5 @@ FROM base AS final
 #    apt-get -y install dotnet-sdk-2.1
 WORKDIR /app/
 COPY --from=dotnet-build /app .
-WORKDIR /app/examples/CoreWeb.dll
+WORKDIR /app/examples/CoreWeb/
 ENTRYPOINT ["dotnet", "../../CoreWeb.ddl"]

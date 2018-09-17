@@ -12,11 +12,11 @@ USER root
 
 FROM microsoft/dotnet:2.1-sdk AS dotnet-build
 
-WORKDIR /src
+WORKDIR /app
 RUN ls
 COPY examples/CoreWeb .
 
-WORKDIR /src/examples/CoreWeb
+WORKDIR /app/examples/CoreWeb
 
 RUN dotnet restore -nowarn:msb3202,nu1503
 

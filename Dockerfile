@@ -14,7 +14,7 @@ FROM microsoft/dotnet:2.1-sdk AS dotnet-build
 
 WORKDIR /src
 
-COPY examples/piranha.core .
+COPY examples/CoreWeb .
 
 WORKDIR /src/examples/CoreWeb
 

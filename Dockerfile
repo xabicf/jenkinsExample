@@ -15,7 +15,6 @@ FROM microsoft/dotnet:2.1-sdk AS dotnet-build
 WORKDIR /src
 COPY piranha.core .
 
-WORKDIR /src/examples/CoreWeb
 
 RUN dotnet restore -nowarn:msb3202,nu1503
 

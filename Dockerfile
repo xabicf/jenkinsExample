@@ -21,7 +21,7 @@ RUN dotnet restore -nowarn:msb3202,nu1503
 
 RUN dotnet publish --no-restore -c Release -o /app
 
-COPY examples/piranha.core/examples/CoreWeb/assets /app/assets
+COPY piranha.core/examples/CoreWeb/assets /app/assets
 
  
 

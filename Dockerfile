@@ -27,4 +27,4 @@ FROM base AS final
 WORKDIR /app/
 COPY --from=dotnet-build /app .
 WORKDIR /app/examples/CoreWeb/
-ENTRYPOINT ["dotnet", "../../CoreWeb.ddl"]
+ENTRYPOINT ["bash"]

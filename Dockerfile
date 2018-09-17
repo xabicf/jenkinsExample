@@ -13,7 +13,7 @@ USER root
 FROM microsoft/dotnet:2.1-sdk AS dotnet-build
 
 WORKDIR /src
-
+RUN ls
 COPY examples/CoreWeb .
 
 WORKDIR /src/examples/CoreWeb
